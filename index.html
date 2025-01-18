@@ -891,9 +891,9 @@ https://templatemo.com/tm-590-topic-listing
                             English</button>
 
                             <ul class="dropdown-menu">
-                                <li><button class="dropdown-item" type="button">English</button></li>
+                                <li><button class="dropdown-item" type="button" onclick="restoreOriginalLanguage()">English</button></li>
 
-                                <li><button class="dropdown-item" type="button">Français</button></li>
+                                <li><button class="dropdown-item" type="button" onclick="TranslatePage('fr')">Français</button></li>
 
                             </ul>
                         </div>
@@ -909,6 +909,18 @@ https://templatemo.com/tm-590-topic-listing
 
 
         <!-- JAVASCRIPT FILES -->
+            <script>
+
+            function TranslatePage(lang) {
+    const currentUrl = window.location.href;
+    const googleTranslateUrl = `https://translate.google.com/translate?hl=${lang}&sl=auto&tl=${lang}&u=${encodeURIComponent(currentUrl)}`;
+    window.location.href = googleTranslateUrl; 
+                }
+
+            function restoreOriginalLanguage() {
+               window.location.href = originalUrl; 
+                }
+        </script>
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.bundle.min.js"></script>
         <script src="js/jquery.sticky.js"></script>
