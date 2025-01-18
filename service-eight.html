@@ -179,14 +179,15 @@ https://templatemo.com/tm-590-topic-listing
             </section>
         </main>
 		
-        <footer class="site-footer section-padding">
+       
+<footer class="site-footer section-padding">
             <div class="container">
                 <div class="row">
 
-                    <div class="col-lg-3 col-12 mb-4 pb-2">
-                        <a class="navbar-brand mb-2" href="index.html">
-                            <i class="bi-back"></i>
-                            <span>Topic</span>
+                    <div class="mb-3 mt-0">
+                        <a class="navbar-brand" style="margin-right: 100px;" href="index.html">
+                            <img src="images/logo-transparent.png" style="width: 50px;" alt="logo de Aarkh">
+                            <span class="mb-5 absolute">Aarkh Financial Services Ltd</span>
                         </a>
                     </div>
 
@@ -195,37 +196,61 @@ https://templatemo.com/tm-590-topic-listing
 
                         <ul class="site-footer-links">
                             <li class="site-footer-link-item">
-                                <a href="#" class="site-footer-link">Home</a>
+                                <a href="#section_1" class="site-footer-link">Home</a>
                             </li>
 
                             <li class="site-footer-link-item">
-                                <a href="#" class="site-footer-link">How it works</a>
+                                <a href="#section_2" class="site-footer-link">Services</a>
+                            </li>
+                            <li class="site-footer-link-item">
+                                <a href="#section_3" class="site-footer-link">About us</a>
                             </li>
 
                             <li class="site-footer-link-item">
-                                <a href="#" class="site-footer-link">FAQs</a>
+                                <a href="#section_4" class="site-footer-link">FAQs</a>
                             </li>
 
                             <li class="site-footer-link-item">
-                                <a href="#" class="site-footer-link">Contact</a>
+                                <a href="#section_5" class="site-footer-link">Contact</a>
                             </li>
                         </ul>
                     </div>
 
                     <div class="col-lg-3 col-md-4 col-6 mb-4 mb-lg-0">
-                        <h6 class="site-footer-title mb-3">Information</h6>
+                        <h6 class="site-footer-title mb-3">Contact us </h6>
+<p class="text-white d-flex mb-1">
+    <i class="fas fa-phone-alt me-2"></i>
+    <a href="tel:+2304687070" class="site-footer-link">
+        (+230) 468 7070
+    </a>
+</p>
 
-                        <p class="text-white d-flex mb-1">
-                            <a href="tel: 305-240-9671" class="site-footer-link">
-                                305-240-9671
-                            </a>
-                        </p>
+<p class="text-white d-flex mb-1">
+    <i class="fas fa-phone-alt me-2"></i>
+    <a href="tel:+23059415941" class="site-footer-link">
+        (+230) 5 941 59 41
+    </a>
+</p>
 
-                        <p class="text-white d-flex">
-                            <a href="mailto:info@company.com" class="site-footer-link">
-                                info@company.com
-                            </a>
-                        </p>
+<p class="text-white d-flex mb-1">
+    <i class="fas fa-envelope me-2"></i>
+    <a href="mailto:director@aaglobalsolutions.com" class="site-footer-link">
+        director@aaglobalsolutions.com
+    </a>
+</p>
+
+<p class="text-white d-flex">
+    <i class="fas fa-envelope me-2"></i>
+    <a href="mailto:ceo@aaglobalsolutions.com" class="site-footer-link">
+        ceo@aaglobalsolutions.com
+    </a>
+</p>
+<p class="text-white d-flex">
+    <i class="fas fa-envelope me-2"></i>
+    <a href="www.aarkh.mu" class="site-footer-link">
+       www.aarkh.mu
+    </a>
+</p>
                     </div>
 
                     <div class="col-lg-3 col-md-4 col-12 mt-4 mt-lg-0 ms-auto">
@@ -234,16 +259,15 @@ https://templatemo.com/tm-590-topic-listing
                             English</button>
 
                             <ul class="dropdown-menu">
-                                <li><button class="dropdown-item" type="button">Thai</button></li>
+                                <li><button class="dropdown-item" type="button" onclick="restoreOriginalLanguage()">English</button></li>
 
-                                <li><button class="dropdown-item" type="button">Myanmar</button></li>
+                                <li><button class="dropdown-item" type="button" onclick="TranslatePage('fr')">Français</button></li>
 
-                                <li><button class="dropdown-item" type="button">Arabic</button></li>
                             </ul>
                         </div>
 
-                        <p class="copyright-text mt-lg-5 mt-4">Copyright © 2048 Topic Listing Center. All rights reserved.
-                        <br><br>Design: <a rel="nofollow" href="https://templatemo.com" target="_blank">TemplateMo</a></p>
+                        <p class="copyright-text mt-lg-5 mt-4">Copyright © 2025 Aarkh Financial Services Ltd propriety. All rights reserved.
+                        <br><br>Go back up : <a rel="nofollow" href="index.html">click here !</a></p>
                         
                     </div>
 
@@ -251,7 +275,21 @@ https://templatemo.com/tm-590-topic-listing
             </div>
         </footer>
 
+
         <!-- JAVASCRIPT FILES -->
+            <script>
+
+            function TranslatePage(lang) {
+    const currentUrl = window.location.href;
+    const googleTranslateUrl = `https://translate.google.com/translate?hl=${lang}&sl=auto&tl=${lang}&u=${encodeURIComponent(currentUrl)}`;
+    window.location.href = googleTranslateUrl; 
+                }
+
+            function restoreOriginalLanguage() {
+               window.location.href = originalUrl; 
+                }
+        </script>
+
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.bundle.min.js"></script>
         <script src="js/jquery.sticky.js"></script>

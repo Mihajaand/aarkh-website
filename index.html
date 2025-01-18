@@ -107,9 +107,9 @@ https://templatemo.com/tm-590-topic-listing
                                         
                                     </span>
 
-                                    <input name="keyword" type="search" class="form-control" id="keyword" placeholder="Legal Expertise, Financial and Tax Advisory, Banking and Finance ..." aria-label="Search">
+                                    <input name="keyword" type="search" class="form-control" id="keyword" placeholder="" aria-label="Search">
 
-                                    <button type="submit" class="form-control">Search</button>
+                                    <button type="submit" class="form-control"><a href="#section_2" style="color: white;">Search</a></button>
                                 </div>
                             </form>
                         </div>
@@ -683,7 +683,7 @@ https://templatemo.com/tm-590-topic-listing
                         <div class="col-12 text-center mt-5">
                             <p class="text-white">
                                 Want to learn more?
-                                <a href="#" class="btn custom-btn custom-border-btn ms-3">Check out Youtube</a>
+                                <a href="https://www.youtube.com" target="_blank" class="btn custom-btn custom-border-btn ms-3">Check out Youtube</a>
                             </p>
                         </div>
                     </div>
@@ -828,22 +828,22 @@ https://templatemo.com/tm-590-topic-listing
 
                         <ul class="site-footer-links">
                             <li class="site-footer-link-item">
-                                <a href="#" class="site-footer-link">Home</a>
+                                <a href="#section_1" class="site-footer-link">Home</a>
                             </li>
 
                             <li class="site-footer-link-item">
-                                <a href="#" class="site-footer-link">Services</a>
+                                <a href="#section_2" class="site-footer-link">Services</a>
                             </li>
                             <li class="site-footer-link-item">
-                                <a href="#" class="site-footer-link">About us</a>
-                            </li>
-
-                            <li class="site-footer-link-item">
-                                <a href="#" class="site-footer-link">FAQs</a>
+                                <a href="#section_3" class="site-footer-link">About us</a>
                             </li>
 
                             <li class="site-footer-link-item">
-                                <a href="#" class="site-footer-link">Contact</a>
+                                <a href="#section_4" class="site-footer-link">FAQs</a>
+                            </li>
+
+                            <li class="site-footer-link-item">
+                                <a href="#section_5" class="site-footer-link">Contact</a>
                             </li>
                         </ul>
                     </div>
@@ -921,6 +921,52 @@ https://templatemo.com/tm-590-topic-listing
                window.location.href = originalUrl; 
                 }
         </script>
+
+        <script>
+     const placeholders = [
+        "Legal Expertise",
+        "Financial and Tax Advisory",
+        "Banking and Finance",
+        "Business Strategy",
+        "Corporate Law"
+    ];
+
+    // Récupération de l'élément input
+    const keywordInput = document.getElementById("keyword");
+
+    let index = 0; // Index du tableau des phrases
+    let charIndex = 0; // Index du caractère actuel
+    let typingSpeed = 40; // Vitesse d'écriture (ms)
+
+    function typePlaceholder() {
+        // Si tous les caractères de la phrase sont écrits
+        if (charIndex < placeholders[index].length) {
+            keywordInput.placeholder += placeholders[index][charIndex]; // Ajouter un caractère
+            charIndex++; // Passer au caractère suivant
+            setTimeout(typePlaceholder, typingSpeed); // Attendre avant d'écrire le caractère suivant
+        } else {
+            // Si la phrase est terminée, passer à la suivante après un délai
+            setTimeout(() => {
+                clearPlaceholder();
+            }, 2000); // Attente avant d'effacer
+        }
+    }
+
+    function clearPlaceholder() {
+        if (charIndex > 0) {
+            keywordInput.placeholder = keywordInput.placeholder.slice(0, -1); // Retirer un caractère
+            charIndex--; // Réduire l'index
+            setTimeout(clearPlaceholder, typingSpeed); // Attendre avant de retirer le prochain caractère
+        } else {
+            // Une fois effacé, passer à la phrase suivante
+            index = (index + 1) % placeholders.length; // Boucler sur le tableau
+            setTimeout(typePlaceholder, typingSpeed); // Commencer la prochaine phrase
+        }
+    }
+
+    // Lancer l'effet d'écriture
+    typePlaceholder();
+</script>
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.bundle.min.js"></script>
         <script src="js/jquery.sticky.js"></script>
