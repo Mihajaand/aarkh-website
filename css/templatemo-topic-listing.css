@@ -6,6 +6,91 @@ https://templatemo.com/tm-590-topic-listing
 
 */
 
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+  .custom-block {
+    margin-bottom: 20px;
+  }
+
+  .custom-block-overlay-text {
+    position: static;
+    margin-top: 15px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .custom-block-overlay-text h4 {
+    font-size: 18px;
+  }
+
+  .custom-block-overlay-text h5 {
+    font-size: 16px;
+  }
+
+  .custom-block-overlay-text p {
+    font-size: 14px;
+    text-indent: 15px;
+  }
+
+  .social-share {
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  .social-icon {
+    gap: 8px;
+  }
+
+  .custom-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .badge {
+    width: 80px;
+  }
+}
+
+@media (max-width: 576px) {
+  .custom-block-overlay-text {
+    margin-top: 10px;
+    padding: 5px;
+  }
+
+  .custom-block-overlay-text h4 {
+    font-size: 16px;
+  }
+
+  .custom-block-overlay-text h5 {
+    font-size: 14px;
+  }
+.custom-icon{
+  display: none;
+}
+  .custom-block-overlay-text p {
+    font-size: 12px;
+    text-indent: 10px;
+  }
+
+
+
+  .social-icon {
+    flex-direction: row;
+    gap: 5px;
+
+  }
+  .para-share{
+    display: none;
+  }
+
+  .custom-btn {
+    font-size: 10px;
+    padding: 6px 12px;
+  }
+
+  
+}
 /*---------------------------------------
   CUSTOM PROPERTIES ( VARIABLES )             
 -----------------------------------------*/
